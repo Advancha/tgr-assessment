@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #333647;
+}
+
+.side-panel {
+  background-color: #d8d8d8;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-top: 1em;
+}
+
+.map {
+  border-radius: 8px;
+  overflow: hidden;
+}
