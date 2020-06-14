@@ -40,15 +40,7 @@ export class MapsComponent implements OnInit {
     this.lat = event.latitude;
     this.selected = true;
   }
-  onMapClick(event) {
+  onMapClick() {
     this.selected = false;
-    /*console.log(event);
-    this.markers.push({
-      lat: event.coords.lat,
-      lng: event.coords.lng,
-      name: 'start location'
-    });
-
-    console.log(this.markers);*/
   }
 }

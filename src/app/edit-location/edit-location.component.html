@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row m-1">
+    <div class="side-panel col-md-6">
+      <form [formGroup]="form" (submit)="onSave()">
+        <div class="form-group">
+          <label for="lat">Lat</label>
+          <input id="lat" type="number" class="form-control" formControlName="lat">
+        </div>
+        <div *ngIf="form.controls.lat.touched && !form.controls.lat.valid" class="alert alert-danger">
+          Latitude required
+        </div>
+
+        <div class="form-group">
+          <label for="lng">Lng</label>
+          <input id="lng" type="number" class="form-control" formControlName="lng">
+        </div>
+        <div *ngIf="form.controls.lng.touched && !form.controls.lng.valid" class="alert alert-danger">
+          Longitude required
+        </div>
+
+        <div class="form-group">
+          <label for="locName">Name</label>
+          <input id="locName" type="text" class="form-control" formControlName="locName">
+        </div>
+        <div *ngIf="form.controls.locName.touched && !form.controls.locName.valid" class="alert alert-danger">
+          Location name required
+        </div>
+
+        <button class="btn btn-dark mb-2" type="submit" [disabled]="!form.valid">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
+

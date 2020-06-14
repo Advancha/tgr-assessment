@@ -23,4 +23,17 @@ export class LocationsService {
   get locations() {
     return this._locations;
   }
+
+  public getLastIndex() {
+    return this._locations.length;
+  }
+  public getItem(index: number): Marker {
+    return this._locations[index];
+  }
+  public post(loc: Marker): void {
+    this._locations.push(loc);
+  }
+  public put(loc: Marker, index: number): void {
+    this._locations[index] = loc;
+  }
 }

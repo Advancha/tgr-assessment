@@ -1,9 +1,11 @@
 <div class="container-fluid">
-  <div class="row m-md-1">
-    <div *ngIf="selected" class="col-md-2 side-panel">
-      <p>Lat: {{lat}}</p>
-      <p>Lng: {{lng}}</p>
-      <p>Name: {{name}}</p>
+  <div class="row row-eq-height">
+    <div *ngIf="selected" class="col-md-2">
+      <div class="mb-3 side-panel">
+        <p>Lat: {{lat}}</p>
+        <p>Lng: {{lng}}</p>
+        <p>Name: {{name}}</p>
+      </div>
     </div>
     <div [ngClass]="{'col-md-12': !selected, 'col-md-10': selected}">
       <div class="map">
@@ -12,7 +14,7 @@
           [longitude]='lng'
           [zoom] = 'zoom'
           [mapTypeId] = 'mapType'
-          (mapClick) = 'onMapClick($event)'>
+          (mapClick) = 'onMapClick()'>
           <agm-marker *ngFor = 'let marker of markers'
                       [latitude]="marker.lat"
                       [longitude]="marker.lng"
@@ -23,5 +25,5 @@
       </div>
     </div>
   </div>
-</div>>
+</div>
 

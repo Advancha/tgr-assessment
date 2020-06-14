@@ -1,0 +1,39 @@
+table {
+  border-collapse:separate;
+  border-spacing: 0 8px;
+}
+
+td, th {
+  text-align: center;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+}
+
+.rounded-td-r {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-color: lightgray;
+  border-style: solid solid solid none;
+}
+
+.rounded-td-l {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-color: lightgray;
+  border-style: solid none solid solid;
+}
+
+.rounded-td-m {
+  border-color: lightgray;
+  border-style: solid none solid none;
+}
+
+.rounded-r {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.rounded-l {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}

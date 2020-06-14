@@ -1,8 +1,29 @@
 <div class="container-fluid">
+  <app-create-btn></app-create-btn>
   <div class="row m-1">
-    <div class="side-panel col-md-8">
-      <p>locations works!</p>
+    <div class="side-panel col-md-6">
+      <table class="table table-responsive-md">
+        <thead  class="bg-dark text-light">
+        <tr>
+          <th class="rounded-l" scope="col">Name</th>
+          <th scope="col">Lat</th>
+          <th scope="col">Lng</th>
+          <th class="rounded-r" scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let marker of markers | paginate: { itemsPerPage: itemsPerPage, currentPage: p }; let i = index">
+          <td class="rounded-td-l">{{marker.name}}</td>
+          <td class="rounded-td-m">{{marker.lat}}</td>
+          <td class="rounded-td-m">{{marker.lng}}</td>
+          <td class="rounded-td-r"><app-edit-btn [index]="(p-1)*itemsPerPage+i"></app-edit-btn></td>
+        </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p=$event"></pagination-controls>
     </div>
-
   </div>
 </div>
+
+
+

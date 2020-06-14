@@ -3,13 +3,27 @@ body {
 }
 
 .side-panel {
-  background-color: #d8d8d8;
-  border-radius: 8px;
+  background-color: #ffffff;
   overflow: hidden;
+  border-radius: 8px;
   padding-top: 1em;
+  padding-left: 1em;
 }
 
 .map {
-  border-radius: 8px;
   overflow: hidden;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 95vh;
+  width: 100% !important;
+}
+
+agm-map {
+  height: 95vh;
+  width: 100% !important;
+}
+
+.row-eq-height{
+  flex-wrap: wrap;
+  display: flex;
 }
