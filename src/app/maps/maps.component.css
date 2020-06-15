@@ -1,7 +1,0 @@
-.row-eq-height{
-  flex-wrap: wrap;
-  display: flex;
-}
-[class^=col] div {
-  flex-grow: 1
-}

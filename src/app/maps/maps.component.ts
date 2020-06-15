@@ -12,7 +12,7 @@ export class MapsComponent implements OnInit {
   lat: number;
   lng: number;
   name = '';
-  zoom = 10;
+  zoom = 8;
   mapType = 'roadmap';
   selected = false;
 
@@ -20,16 +20,13 @@ export class MapsComponent implements OnInit {
 
   ngOnInit() {
     this.markers = this.locationsService.locations;
-    this.setCurrentLocation();
+    this.setLocation();
   }
 
-  // Get Current Location Coordinates
-  private setCurrentLocation() {
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.lat = position.coords.latitude;
-        this.lng = position.coords.longitude;
-      });
+  private setLocation() {
+    if (this.markers.length > 0) {
+      this.lat = +this.markers[0].lat;
+      this.lng = +this.markers[0].lng;
     }
   }
 
